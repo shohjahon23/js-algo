@@ -10,10 +10,22 @@ Given a number n, return the number of positive odd numbers below n!!!
 
 Expect large Inputs!
 
-# *Solution*
+# *Solutions*
 
+// ======== first way ========
 ``` js
 function oddCount(n){
   return Math.floor(n/2);
+}
+```
+
+// ======== second way ========
+``` js
+let i = 1
+let arr = []
+function oddCount(n){
+    for(i; i < n; i = i + 2){
+        arr.push(i)
+    }
 }
 ```

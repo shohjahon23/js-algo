@@ -10,38 +10,38 @@
 ## Example:
 
 ``` js
-For input [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15], you should return [10, -65].
+  For input [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15], you should return [10, -65].
 ```
 
 # *Solution*
 
 ``` js
-function countPositivesSumNegatives(input) {
-  if (input == null) {
-    return [];
-  } else if (input.length == []) {
-    return [];
-  } else {
-    let positiveArr = [];
-    let negativeArr = [];
+  function countPositivesSumNegatives(input) {
+    if (input == null) {
+      return [];
+    } else if (input.length == []) {
+      return [];
+    } else {
+      let positiveArr = [];
+      let negativeArr = [];
 
-    for (let item of input) {
-      if (item < 0) {
-        negativeArr.push(item);
-      } else if (item > 0) {
-        positiveArr.push(item);
+      for (let item of input) {
+        if (item < 0) {
+          negativeArr.push(item);
+        } else if (item > 0) {
+          positiveArr.push(item);
+        }
       }
-    }
-    let positiveNum = positiveArr.length;
-    let negativeNum = 0;
+      let positiveNum = positiveArr.length;
+      let negativeNum = 0;
 
-    for (let item of negativeArr) {
-      negativeNum += item;
+      for (let item of negativeArr) {
+        negativeNum += item;
+      }
+      return [positiveNum, negativeNum];
     }
-    return [positiveNum, negativeNum];
   }
-}
 
-console.log(countPositivesSumNegatives([1, -2, 3, -4, 5]));
+  console.log(countPositivesSumNegatives([1, -2, 3, -4, 5]));
 ```
 
