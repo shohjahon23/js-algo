@@ -1,4 +1,4 @@
-# *Count Odd Numbers below n*
+# *Count Odd Numbers below n* `8kyu`
 
 Given a number n, return the number of positive odd numbers below n!!!
 
